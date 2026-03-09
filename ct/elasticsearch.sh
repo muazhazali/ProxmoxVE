@@ -13,7 +13,7 @@ var_tags="search;analytics;kibana"
 
 # Container Resources (Elasticsearch is memory-intensive, Kibana needs extra)
 var_cpu="4"
-var_ram="4096"
+var_ram="6144"
 var_disk="20"
 
 # Container Type & OS
