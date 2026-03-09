@@ -5,7 +5,7 @@
 # Source: https://www.elastic.co/elasticsearch
 
 # Import main orchestrator
-source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/build.func)
+source <(curl -fsSL https://raw.githubusercontent.com/muazhazali/ProxmoxVE/feat/elasticsearch-kibana/misc/build.func)
 
 # Application Configuration
 APP="Elasticsearch"
