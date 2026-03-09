@@ -1,0 +1,52 @@
+{
+  "name": "Elasticsearch",
+  "slug": "elasticsearch",
+  "categories": [
+    12
+  ],
+  "date_created": "2025-03-09",
+  "type": "ct",
+  "updateable": true,
+  "privileged": false,
+  "interface_port": 5601,
+  "documentation": "https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html",
+  "website": "https://www.elastic.co/elasticsearch",
+  "logo": "https://cdn.jsdelivr.net/gh/selfhst/icons/svg/elasticsearch.svg",
+  "config_path": "",
+  "description": "Elasticsearch is a distributed, RESTful search and analytics engine capable of addressing a growing number of use cases. This script installs both Elasticsearch and Kibana in a single LXC container, providing a complete search and visualization stack.",
+  "install_methods": [
+    {
+      "type": "default",
+      "script": "ct/elasticsearch.sh",
+      "resources": {
+        "cpu": 4,
+        "ram": 4096,
+        "hdd": 20,
+        "os": "Debian",
+        "version": "12"
+      }
+    }
+  ],
+  "default_credentials": {
+    "username": "elastic",
+    "password": "Saved in /root/.elastic_password"
+  },
+  "notes": [
+    {
+      "text": "Elasticsearch API is accessible at `https://<IP>:9200` (HTTPS with self-signed cert).",
+      "type": "info"
+    },
+    {
+      "text": "Kibana dashboard is accessible at `http://<IP>:5601`.",
+      "type": "info"
+    },
+    {
+      "text": "The elastic superuser password is saved at `/root/.elastic_password` inside the container.",
+      "type": "warning"
+    },
+    {
+      "text": "Elasticsearch requires significant memory. The default 4096 MB RAM is the minimum recommended.",
+      "type": "warning"
+    }
+  ]
+}
